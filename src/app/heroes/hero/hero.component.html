@@ -1,0 +1,27 @@
+<h1>Componente hero</h1>
+
+<dl>
+    <dt>Nombre:</dt>
+    <dd>{{nombre}}</dd>
+
+    <dt>Edad:</dt>
+    <dd>{{edad}}</dd>
+
+    <dt>Método:</dt>
+    <dd>{{descrip()}}</dd>
+    
+    <dt>En mayúsculas:</dt>
+    <dd>{{nombreMayus}}</dd>
+</dl>
+
+<input type="button" 
+value="Cambiar nombre" 
+class="btn btn-primary mx-2" 
+(click)="cambiarNombre()" 
+*ngIf="nombre==='ironman'">
+<input type="button" 
+value="Cambiar edad" 
+class="btn btn-primary mx-2" 
+(click)="cambiarEdad()"
+*ngIf="edad===45">
+<input type="button" value="Reset" class="btn btn-primary mx-2"  (click)="reset()">

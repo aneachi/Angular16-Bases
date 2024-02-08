@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-counter',
+  template: `
+    <h3>Contador: {{ counter }}</h3>
+    <input type="button" value="-1" (click)="decrementar()">
+    <input type="button" value="Reset" (click)="reset()">
+    <input type="button" value="+1" (click)="incrementar()">
+  `,
+  styles: ``
 })
-export class AppComponent {
+export class CounterComponent {
   private _title: string = 'Bases';
   private _counter: number = 10; 
     
